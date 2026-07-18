@@ -11,7 +11,7 @@ function ProjectCard({ project }) {
         <span className="shrink-0 text-sm text-zinc-500">★ {project.stargazers_count}</span>
       </div>
       <p className="mt-2 flex-1 text-sm text-zinc-600 dark:text-zinc-400">
-        {project.description}
+        {project.description ?? 'No description yet.'}
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
         {project.language && (
@@ -19,7 +19,7 @@ function ProjectCard({ project }) {
             {project.language}
           </span>
         )}
-        {project.topics.map((topic) => (
+        {(project.topics ?? []).map((topic) => (
           <span
             key={topic}
             className="rounded-full bg-zinc-100 px-2 py-0.5 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
