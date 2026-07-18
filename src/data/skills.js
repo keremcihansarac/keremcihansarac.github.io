@@ -2,7 +2,7 @@
 export const skillGroups = [
   {
     title: 'Languages',
-    items: ['JavaScript', 'Python', 'Java', 'C', 'HTML & CSS'],
+    items: ['JavaScript', 'Python', 'Java', 'C++', 'HTML & CSS'],
   },
   {
     title: 'Frameworks & Libraries',
