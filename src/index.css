@@ -4,9 +4,13 @@
   /* Elegant serif stack for headings (used via font-serif) */
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
 
-  /* Warm monochrome base */
+  /* Warm monochrome base + section background steps */
   --color-paper: #faf7f2;
+  --color-cream-2: #f4ecdf;
+  --color-cream-3: #ede1cc;
   --color-night: #171310;
+  --color-night-2: #1d1712;
+  --color-night-3: #241b14;
 
   /* Brown accent scale */
   --color-coffee-100: #f0e7db;
@@ -22,4 +26,46 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Mascot idle animations */
+.mascot-bob {
+  animation: mascot-bob 4s ease-in-out infinite;
+}
+
+.mascot-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mascot-blink 5s infinite;
+}
+
+@keyframes mascot-bob {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -7px;
+  }
+}
+
+@keyframes mascot-blink {
+  0%,
+  93%,
+  100% {
+    scale: 1 1;
+  }
+  96% {
+    scale: 1 0.08;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .mascot-bob,
+  .mascot-eyes {
+    animation: none;
+  }
 }

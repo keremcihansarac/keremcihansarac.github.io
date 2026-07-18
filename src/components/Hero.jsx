@@ -1,34 +1,6 @@
 import { profile } from '../data/profile'
+import Mascot from './Mascot'
 import Reveal from './Reveal'
-
-// Abstract decorative figure — swap for a photo or illustration later.
-function HeroFigure() {
-  return (
-    <svg viewBox="0 0 320 320" className="h-64 w-64 lg:h-80 lg:w-80" aria-hidden="true">
-      <circle
-        cx="160"
-        cy="160"
-        r="132"
-        strokeWidth="1.5"
-        className="fill-none stroke-coffee-300 dark:stroke-coffee-700"
-      />
-      <circle cx="205" cy="115" r="58" className="fill-coffee-200/80 dark:fill-coffee-800/70" />
-      <path
-        d="M 44 196 A 118 118 0 0 0 214 270"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        className="fill-none stroke-coffee-600 dark:stroke-coffee-400"
-      />
-      <path
-        d="M 84 84 A 104 104 0 0 1 244 96"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        className="fill-none stroke-coffee-400 dark:stroke-coffee-500"
-      />
-      <circle cx="118" cy="208" r="7" className="fill-stone-900 dark:fill-stone-100" />
-    </svg>
-  )
-}
 
 function Hero() {
   return (
@@ -68,7 +40,7 @@ function Hero() {
             </div>
           </div>
           <div className="hidden shrink-0 md:block">
-            <HeroFigure />
+            <Mascot />
           </div>
         </div>
       </Reveal>
