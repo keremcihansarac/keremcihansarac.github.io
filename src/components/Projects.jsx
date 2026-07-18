@@ -1,7 +1,8 @@
 import { profile } from '../data/profile'
-import { featuredRepos } from '../data/projects'
+import { featuredRepos, schoolProjects } from '../data/projects'
 import { useGithubRepos } from '../hooks/useGithubRepos'
 import ProjectCard from './ProjectCard'
+import SchoolProjectCard from './SchoolProjectCard'
 
 // Featured repos first (in featuredRepos order), then the rest; forks are hidden.
 function orderRepos(repos) {
@@ -18,19 +19,32 @@ function Projects() {
 
   return (
     <section id="projects" className="mx-auto max-w-4xl scroll-mt-20 px-6 py-16">
-      <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Projects</h2>
-      <p className="mt-2 text-sm text-zinc-500">
-        Fetched live from my GitHub profile.
-      </p>
+      <h2 className="font-serif text-3xl font-semibold text-stone-900 dark:text-stone-100">
+        Projects
+      </h2>
+
+      <h3 className="mt-8 text-sm font-medium tracking-wide text-coffee-700 uppercase dark:text-coffee-300">
+        University coursework
+      </h3>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {schoolProjects.map((project) => (
+          <SchoolProjectCard key={project.name} project={project} />
+        ))}
+      </div>
+
+      <h3 className="mt-12 text-sm font-medium tracking-wide text-coffee-700 uppercase dark:text-coffee-300">
+        On GitHub
+      </h3>
+      <p className="mt-1 text-sm text-stone-500">Fetched live from my GitHub profile.</p>
 
       {loading && (
-        <p className="mt-6 text-zinc-500" role="status">
+        <p className="mt-4 text-stone-500" role="status">
           Loading projects…
         </p>
       )}
 
       {error && (
-        <p className="mt-6 text-zinc-600 dark:text-zinc-400">
+        <p className="mt-4 text-stone-600 dark:text-stone-400">
           Couldn’t load projects right now — you can browse them directly on{' '}
           <a
             href={profile.links.github}
@@ -45,7 +59,7 @@ function Projects() {
       )}
 
       {repos && (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {orderRepos(repos).map((repo) => (
             <ProjectCard key={repo.id} project={repo} />
           ))}

@@ -2,14 +2,14 @@
 export const skillGroups = [
   {
     title: 'Languages',
-    items: ['JavaScript', 'Python', 'Java', 'C++', 'HTML & CSS'],
+    items: ['Python', 'C++', 'JavaScript', 'Java', 'HTML & CSS'],
   },
   {
     title: 'Frameworks & Libraries',
-    items: ['React', 'Vite', 'Tailwind CSS', 'Node.js'],
+    items: ['FastAPI', 'SQLAlchemy', 'Qt', 'React', 'Vite', 'Tailwind CSS', 'OpenGL', 'OpenCV'],
   },
   {
-    title: 'Tools',
-    items: ['Git & GitHub', 'VS Code', 'Linux'],
+    title: 'Tools & Practices',
+    items: ['Git & GitHub', 'GitLab CI/CD', 'Docker', 'Kubernetes', 'SonarQube', 'Linux'],
   },
 ]

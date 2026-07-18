@@ -5,17 +5,26 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Reveal from './components/Reveal'
 
 function App() {
   return (
-    <div className="min-h-svh bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
+    <div className="min-h-svh bg-paper text-stone-800 antialiased dark:bg-night dark:text-stone-300">
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
     </div>

@@ -1,1 +1,25 @@
 @import 'tailwindcss';
+
+@theme {
+  /* Elegant serif stack for headings (used via font-serif) */
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+
+  /* Warm monochrome base */
+  --color-paper: #faf7f2;
+  --color-night: #171310;
+
+  /* Brown accent scale */
+  --color-coffee-100: #f0e7db;
+  --color-coffee-200: #e2d2bd;
+  --color-coffee-300: #c9ab89;
+  --color-coffee-400: #b08968;
+  --color-coffee-500: #96704f;
+  --color-coffee-600: #7f5539;
+  --color-coffee-700: #66432c;
+  --color-coffee-800: #4e3323;
+  --color-coffee-900: #392619;
+}
+
+html {
+  scroll-behavior: smooth;
+}
