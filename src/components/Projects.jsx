@@ -3,6 +3,7 @@ import { featuredRepos, schoolProjects } from '../data/projects'
 import { useGithubRepos } from '../hooks/useGithubRepos'
 import ProjectCard from './ProjectCard'
 import SchoolProjectCard from './SchoolProjectCard'
+import SectionHeading from './SectionHeading'
 
 // Featured repos first (in featuredRepos order), then the rest; forks are hidden.
 function orderRepos(repos) {
@@ -19,9 +20,7 @@ function Projects() {
 
   return (
     <section id="projects" className="mx-auto max-w-4xl scroll-mt-20 px-6 py-16">
-      <h2 className="font-serif text-3xl font-semibold text-stone-900 dark:text-stone-100">
-        Projects
-      </h2>
+      <SectionHeading number="02" title="Projects" />
 
       <h3 className="mt-8 text-sm font-medium tracking-wide text-coffee-700 uppercase dark:text-coffee-300">
         University coursework

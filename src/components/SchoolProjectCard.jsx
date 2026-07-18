@@ -1,6 +1,6 @@
 function SchoolProjectCard({ project }) {
   return (
-    <div className="flex flex-col rounded-lg border border-stone-200 p-5 transition-colors hover:border-coffee-400 dark:border-stone-800 dark:hover:border-coffee-500">
+    <div className="flex flex-col rounded-lg border border-stone-200 p-5 transition hover:-translate-y-1 hover:border-coffee-400 hover:shadow-lg hover:shadow-coffee-600/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-stone-800 dark:hover:border-coffee-500 dark:hover:shadow-black/40">
       <h3 className="font-serif text-lg font-medium text-stone-900 dark:text-stone-100">
         {project.name}
       </h3>

@@ -4,7 +4,6 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 const linkStyle =
@@ -13,7 +12,7 @@ const linkStyle =
 
 function Navbar() {
   return (
-    <header className="sticky top-0 z-10 border-b border-stone-200 bg-inherit dark:border-stone-800">
+    <header className="sticky top-0 z-10 border-b border-stone-200 bg-paper/80 backdrop-blur dark:border-stone-800 dark:bg-night/80">
       <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
         <a
           href="#top"

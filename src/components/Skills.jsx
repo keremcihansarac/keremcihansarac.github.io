@@ -1,11 +1,10 @@
 import { skillGroups } from '../data/skills'
+import SectionHeading from './SectionHeading'
 
 function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-4xl scroll-mt-20 px-6 py-16">
-      <h2 className="font-serif text-3xl font-semibold text-stone-900 dark:text-stone-100">
-        Skills
-      </h2>
+      <SectionHeading number="03" title="Skills" />
       <div className="mt-8 grid gap-8 sm:grid-cols-3">
         {skillGroups.map((group) => (
           <div key={group.title}>
@@ -16,7 +15,7 @@ function Skills() {
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-full border border-stone-200 px-3 py-1 text-sm text-stone-700 dark:border-stone-700 dark:text-stone-300"
+                  className="rounded-full border border-stone-200 px-3 py-1 text-sm text-stone-700 transition-colors hover:border-coffee-400 hover:bg-coffee-100/60 dark:border-stone-700 dark:text-stone-300 dark:hover:border-coffee-500 dark:hover:bg-coffee-900/40"
                 >
                   {item}
                 </li>

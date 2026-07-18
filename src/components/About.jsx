@@ -1,11 +1,10 @@
 import { profile } from '../data/profile'
+import SectionHeading from './SectionHeading'
 
 function About() {
   return (
     <section id="about" className="mx-auto max-w-4xl scroll-mt-20 px-6 py-16">
-      <h2 className="font-serif text-3xl font-semibold text-stone-900 dark:text-stone-100">
-        About
-      </h2>
+      <SectionHeading number="01" title="About" />
       <div className="mt-8 grid gap-12 lg:grid-cols-[1fr_16rem]">
         <div className="space-y-4">
           {profile.about.map((paragraph) => (

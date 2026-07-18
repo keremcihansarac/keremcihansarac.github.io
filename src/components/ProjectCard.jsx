@@ -4,7 +4,7 @@ function ProjectCard({ project }) {
       href={project.html_url}
       target="_blank"
       rel="noreferrer"
-      className="flex flex-col rounded-lg border border-stone-200 p-5 transition-colors hover:border-coffee-400 dark:border-stone-800 dark:hover:border-coffee-500"
+      className="flex flex-col rounded-lg border border-stone-200 p-5 transition hover:-translate-y-1 hover:border-coffee-400 hover:shadow-lg hover:shadow-coffee-600/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-stone-800 dark:hover:border-coffee-500 dark:hover:shadow-black/40"
     >
       <div className="flex items-baseline justify-between gap-2">
         <h3 className="font-serif text-lg font-medium text-stone-900 dark:text-stone-100">

@@ -39,7 +39,11 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="hidden shrink-0 md:block">
+          <div className="relative hidden shrink-0 md:block">
+            <div
+              className="absolute inset-4 -z-10 rounded-full bg-coffee-200/60 blur-3xl dark:bg-coffee-800/40"
+              aria-hidden="true"
+            />
             <Mascot />
           </div>
         </div>

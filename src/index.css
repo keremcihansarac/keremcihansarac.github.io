@@ -4,13 +4,9 @@
   /* Elegant serif stack for headings (used via font-serif) */
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
 
-  /* Warm monochrome base + section background steps */
+  /* Warm monochrome base */
   --color-paper: #faf7f2;
-  --color-cream-2: #f4ecdf;
-  --color-cream-3: #ede1cc;
   --color-night: #171310;
-  --color-night-2: #1d1712;
-  --color-night-3: #241b14;
 
   /* Brown accent scale */
   --color-coffee-100: #f0e7db;
@@ -26,6 +22,18 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--color-coffee-200);
+  color: var(--color-coffee-900);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: var(--color-coffee-700);
+    color: var(--color-coffee-100);
+  }
 }
 
 /* Mascot idle animations */
